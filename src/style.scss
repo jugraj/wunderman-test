@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+.container {
+	margin: auto;
+	text-align: center;
+	max-width: 600px;
+	font-family: 'Roboto', sans-serif;
+
+	&__loading {
+		color: red;
+		font-size: 26px;
+	}
+
+	&__accordian {
+		padding: 0;
+		margin-bottom: 10px;
+		&__tab {
+			background-color: #23d2da;
+			cursor: pointer;
+			color: #126ee8;
+			padding: 15px;
+			width: 100%;
+			max-width: 600px;
+			text-align: left;
+			font-size: 16px;
+			border: #969696 solid 1px;
+			border-radius: 5px;
+			position: relative;
+			outline: none;
+			transition: all 0.3s ease-in-out;
+			-webkit-transition: all 0.3s ease-in-out;
+			-o-transition: all 0.3s ease-in-out;
+			-ms-transition: all 0.3s ease-in-out;
+			&:after {
+				content: '[+]';
+				position: absolute;
+				right: 10px;
+			}
+
+			&:hover {
+				background-color: lighten(#23d2da, 10%);
+				color: darken(#126ee8, 10%);
+			}
+			&--open {
+				border-radius: 5px 5px 0px 0px;
+				&:after {
+					content: '[-]';
+					position: absolute;
+					right: 10px;
+				}
+			}
+		}
+		&__content {
+			text-align: left;
+			padding: 0px 15px;
+			background-color: #f3f3f3;
+			max-height: 0px;
+			overflow: hidden;
+			transition: all 0.3s ease-in-out;
+			-webkit-transition: all 0.3s ease-in-out;
+			-o-transition: all 0.3s ease-in-out;
+			-ms-transition: all 0.3s ease-in-out;
+			border: #969696 solid 0.1px;
+			border-radius: 0px;
+			&--open {
+				max-height: 200px;
+				margin-bottom: 10px;
+				border: #969696 solid 1px;
+				border-radius: 0px 0px 5px 5px;
+			}
+		}
+	}
+}
