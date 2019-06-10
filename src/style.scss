@@ -70,4 +70,12 @@
 			}
 		}
 	}
+	&__footer {
+		position: absolute;
+		right: 10px;
+		bottom: 10px;
+		font-size: 12px;
+		color: grey;
+		text-align: right;
+	}
 }

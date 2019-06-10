@@ -52,6 +52,10 @@ const App = () => {
 					</div>
 				</div>
 			))}
+			<div className="container__footer">
+				Jay Sukhija <br />
+				jugraj@gmail.com{' '}
+			</div>
 		</div>
 	);
 };
